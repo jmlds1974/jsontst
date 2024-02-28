@@ -1,0 +1,62 @@
+{
+    "name": "CI Alerts",
+	"description": "Cost Insights Alert control",
+	"eula": "EULA",
+	"vendor": "Novartis",
+	"license": "1.0",
+	"id": "com.sap.ci.alerts2",
+	"newInstancePrefix": "CIAlertsInstace",
+	"version": "2.1.5",
+	"icon": "https://sac-dev-cw.novartis.net/cw/dev/ci_alerts/icon.png",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-sap-ci-alerts2",
+			"url": "https://sac-dev-cw.novartis.net/cw/dev/ci_alerts/ci_alerts_main.js?v=2.1.5",
+			"integrity": ""	,
+			"ignoreIntegrity": true
+			
+		}		
+	],
+	"properties": {
+		"width": {
+			"type": "integer",
+			"default": 50
+		},
+		"height": {
+			"type": "integer",
+			"default": 20
+		},
+		"method": {
+			"type": "string",
+			"description": "Method",
+			"default": "onInitialization"
+		}			
+		
+	},
+	"methods": {
+		"clear": {
+			"description": "Clear the resultset"
+		},
+		"getID": {
+		  "returnType": "string",
+		  "description": "Return ID of option selected"
+		},
+		"getComments": {
+		  "returnType": "string",
+		  "description": "Return Comments for the selected app ID",
+		  "parameters": [
+			{
+			  "name": "appID",
+			  "type": "string",
+			  "description": "Application UID"
+			}
+		  ]
+		}
+	},
+	"events": {
+		"onClick": {
+			"description": "Shows the Alerts for the option selected."
+		}
+	}
+}
